@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload PDF</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="curved-header">
+    <h1>Upload PDF</h1>
+    <p>Authorized users only</p>
+  </header>
+
+  <div class="content">
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      <input type="password" name="upload_password" placeholder="Enter upload password" required><br>
+      <input type="file" name="pdf_file" accept="application/pdf" required><br>
+      <button type="submit" class="btn">Upload</button>
+    </form>
+    <p><a href="index.html" class="btn btn-secondary">← Back to Home</a></p>
+  </div>
+</body>
+</html>
