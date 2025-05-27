@@ -1,93 +1,112 @@
-/* Default styles for all screen sizes */
-body {
-  background-color: #121212;
-  color: #E0E0E0;
-  font-family: 'Segoe UI', sans-serif;
+/* Reset and base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  width: 220px;
   background-color: #1e1e1e;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #333;
+}
+
+.sidebar h2 {
+  color: #00bcd4;
+  font-size: 22px;
   text-align: center;
-  border-bottom: 2px solid #333;
+  margin-bottom: 30px;
 }
 
-header h1 {
-  font-size: 24px;
-  margin: 0;
-}
-
-header p {
-  color: #bbbbbb;
-  margin: 5px 0 0;
-}
-
-/* Container for buttons or content */
-.content {
-  text-align: center;
-  padding: 20px;
-}
-
-/* Buttons */
-a.btn, button {
-  display: inline-block;
-  background-color: #2a2a2a;
+.sidebar a {
   color: #e0e0e0;
-  padding: 12px 20px;
-  margin: 10px;
   text-decoration: none;
+  background: #2a2a2a;
+  padding: 12px;
   border-radius: 5px;
-  border: none;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: #3a3a3a;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Curved Header */
+.curved-header {
+  background: linear-gradient(135deg, #222, #111);
+  padding: 40px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.curved-header h1 {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.curved-header p {
+  color: #bbbbbb;
   font-size: 16px;
-  transition: 0.3s;
+  margin-top: 10px;
 }
 
-a.btn:hover, button:hover {
-  background-color: #3a3a3a;
+/* Main content */
+.main-content {
+  padding: 30px;
+  font-size: 18px;
 }
 
-/* Forms */
-form {
-  max-width: 500px;
-  margin: 20px auto;
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #000;
-}
-
-input[type="file"],
-input[type="password"],
-input[type="text"],
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  background-color: #2a2a2a;
-  border: none;
-  color: #e0e0e0;
-  border-radius: 4px;
-}
-
-/* ✅ Responsive for smaller screens */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
 
-  a.btn, button {
+  .sidebar {
     width: 100%;
-    font-size: 16px;
-    margin: 10px 0;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+    border-bottom: 1px solid #333;
   }
 
-  .content {
-    padding: 10px;
+  .sidebar h2 {
+    display: none;
   }
 
-  form {
-    padding: 15px;
+  main {
+    width: 100%;
+  }
+
+  .curved-header {
+    border-radius: 0;
   }
 }
