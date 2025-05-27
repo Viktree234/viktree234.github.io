@@ -1,71 +1,93 @@
-/* Base Styles */
+/* Default styles for all screen sizes */
 body {
   background-color: #121212;
   color: #E0E0E0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Header */
 header {
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   padding: 20px;
   text-align: center;
+  border-bottom: 2px solid #333;
 }
 
 header h1 {
-  color: #FFFFFF;
+  font-size: 24px;
   margin: 0;
 }
 
 header p {
-  color: #BBBBBB;
+  color: #bbbbbb;
   margin: 5px 0 0;
 }
 
+/* Container for buttons or content */
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
 /* Buttons */
-a.btn {
+a.btn, button {
   display: inline-block;
-  background-color: #2A2A2A;
-  color: #E0E0E0;
-  padding: 10px 20px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 12px 20px;
   margin: 10px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  border: none;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-a.btn:hover {
-  background-color: #3A3A3A;
+a.btn:hover, button:hover {
+  background-color: #3a3a3a;
 }
 
 /* Forms */
 form {
-  background-color: #1E1E1E;
-  padding: 20px;
-  border-radius: 5px;
   max-width: 500px;
   margin: 20px auto;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
 }
 
 input[type="file"],
 input[type="password"],
+input[type="text"],
 button {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
-  background-color: #2A2A2A;
+  margin: 8px 0;
+  background-color: #2a2a2a;
   border: none;
-  color: #E0E0E0;
-  border-radius: 3px;
+  color: #e0e0e0;
+  border-radius: 4px;
 }
 
-button {
-  background-color: #3A3A3A;
-  cursor: pointer;
-}
+/* ✅ Responsive for smaller screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
 
-button:hover {
-  background-color: #4A4A4A;
+  a.btn, button {
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
 }
