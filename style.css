@@ -1,112 +1,50 @@
-/* Reset and base */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  display: flex;
-  min-height: 100vh;
+  font-family: 'Georgia', serif;
+  background-color: #0b0b0b;
+  color: #fff;
+  text-align: center;
+  background-image: url('hearts-bg.png'); /* optional heart background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .container {
-  display: flex;
-  flex: 1;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* Sidebar Menu */
-.sidebar {
-  width: 220px;
-  background-color: #1e1e1e;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-right: 1px solid #333;
-}
-
-.sidebar h2 {
-  color: #00bcd4;
-  font-size: 22px;
-  text-align: center;
+h1 {
+  font-size: 3em;
+  color: #ff2d55;
   margin-bottom: 30px;
 }
 
-.sidebar a {
-  color: #e0e0e0;
-  text-decoration: none;
-  background: #2a2a2a;
-  padding: 12px;
-  border-radius: 5px;
-  text-align: center;
-  transition: background 0.3s;
+.emoji {
+  font-size: 0.7em;
 }
 
-.sidebar a:hover {
-  background: #3a3a3a;
+.media-section video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 45, 85, 0.6);
 }
 
-/* Main Section */
-main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.message {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: #f1f1f1;
+  line-height: 1.6;
 }
 
-/* Curved Header */
-.curved-header {
-  background: linear-gradient(135deg, #222, #111);
-  padding: 40px 20px;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.curved-header h1 {
-  font-size: 28px;
-  color: #ffffff;
-}
-
-.curved-header p {
-  color: #bbbbbb;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-/* Main content */
-.main-content {
-  padding: 30px;
-  font-size: 18px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    border-right: none;
-    border-bottom: 1px solid #333;
-  }
-
-  .sidebar h2 {
-    display: none;
-  }
-
-  main {
-    width: 100%;
-  }
-
-  .curved-header {
-    border-radius: 0;
-  }
+.music-player {
+  width: 100%;
+  max-width: 300px;
+  outline: none;
+  filter: drop-shadow(0 0 10px #ff2d55);
 }
