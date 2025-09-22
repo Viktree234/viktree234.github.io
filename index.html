@@ -1,330 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Yoruba History — Exam Prep</title>
-  <style>
-    :root{
-      --bg:#0f1724;--card:#121826;--muted:#9aa4b2;--accent:#7c4dff;--glass:rgba(255,255,255,0.03);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial; background:linear-gradient(180deg,#071022 0%,#0f1724 100%);color:#e6eef8}
-    header{padding:24px;text-align:center;background:linear-gradient(90deg, rgba(124,77,255,0.14), rgba(0,0,0,0));backdrop-filter:blur(4px)}
-    header h1{margin:0;font-size:1.6rem;letter-spacing:0.2px}
-    .wrap{max-width:980px;margin:20px auto;padding:16px}
-
-    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
-    .tab{background:var(--card);border:1px solid rgba(255,255,255,0.03);padding:10px 14px;border-radius:10px;cursor:pointer}
-    .tab.active{box-shadow:0 6px 20px rgba(124,77,255,0.08);border-color:rgba(124,77,255,0.25)}
-
-    .grid{display:grid;grid-template-columns:1fr;gap:16px}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 360px}}
-
-    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    h2{margin:0 0 10px 0}
-    p{color:var(--muted);line-height:1.5}
-
-    /* Flashcards */
-    .flash{display:flex;flex-direction:column;gap:12px;align-items:center}
-    .flashcard{width:100%;min-height:140px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-    .q{font-weight:600;font-size:1.05rem}
-    .a{margin-top:8px;color:var(--accent);font-weight:600}
-    .controls{display:flex;gap:8px}
-
-    /* Quiz */
-    .option{display:block;width:100%;text-align:left;padding:10px;border-radius:8px;margin:8px 0;background:var(--glass);border:1px solid rgba(255,255,255,0.02);cursor:pointer}
-    .option.correct{outline:3px solid rgba(16,185,129,0.12)}
-    .option.wrong{outline:3px solid rgba(239,68,68,0.12)}
-
-    .progress{height:8px;background:rgba(255,255,255,0.04);border-radius:20px;overflow:hidden}
-    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4f46e5);width:0%}
-
-    .topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:10px}
-    .small{font-size:0.9rem;color:var(--muted)}
-
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:0.85rem}
-
-    .btn{background:linear-gradient(90deg,var(--accent),#4f46e5);border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer}
-    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
-
-    /* utilities */
-    .hidden{display:none}
-    .center{display:flex;align-items:center;justify-content:center}
-    .meta{font-size:0.88rem;color:var(--muted)}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics 104 Formula Sheet</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+ src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #fefefe;
+    color: #111;
+  }
+  h2 {
+    color: #d6336c;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+  }
+  .formula {
+    margin: 6px 0;
+    font-size: 1.1em;
+  }
+  @media(max-width:600px){
+    body { padding: 10px; font-size: 16px; }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Yoruba History — Exam Prep</h1>
-    <div class="small">Notes · Flashcards · MCQ Quiz · Downloadable PDF</div>
-  </header>
 
-  <div class="wrap">
-    <nav id="nav"></nav>
+<h1>Physics 104 – Quick Formula Sheet</h1>
 
-    <div class="grid">
-      <div>
-        <section id="notesSection" class="card">
-          <div class="topbar">
-            <div>
-              <h2>Concise Notes</h2>
-              <div class="meta">Printable & downloadable — click "Download PDF"</div>
-            </div>
-            <div class="center">
-              <button class="btn" id="downloadPdfBtn">Download PDF</button>
-            </div>
-          </div>
+<h2>Electrostatics, Capacitance & Dielectrics</h2>
+<div class="formula">Coulomb's law: \( F = \frac{1}{4\pi \varepsilon_0} \frac{q_1 q_2}{r^2} \)</div>
+<div class="formula">Electric field: \( E = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r^2} \)</div>
+<div class="formula">Potential: \( V = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r} \)</div>
+<div class="formula">Capacitance: \( C = \frac{Q}{V} \)</div>
+<div class="formula">Parallel plate: \( C = \frac{\varepsilon_0 A}{d} \)</div>
+<div class="formula">With dielectric: \( C = \kappa \frac{\varepsilon_0 A}{d} \)</div>
+<div class="formula">Energy stored: \( U = \frac{1}{2} C V^2 = \frac{Q^2}{2C} = \frac{1}{2} QV \)</div>
 
-          <div id="notesContent">
-            <h3>Origin & Early History</h3>
-            <p><strong>Ile-Ife:</strong> Considered the cradle of the Yoruba civilization. Traditional accounts claim Odùduwà was sent by Olódùmarè to create the earth and founded Ile-Ife.</p>
-            <p><strong>Odùduwà:</strong> Regarded as ancestor of the Yoruba and source of royal lineages; many Obas trace descent to him.</p>
+<h2>Current Electricity</h2>
+<div class="formula">Ohm's law: \( V = IR \)</div>
+<div class="formula">Current: \( I = \frac{Q}{t} \)</div>
+<div class="formula">Resistance: \( R = \rho \frac{L}{A} \)</div>
+<div class="formula">Power: \( P = VI = I^2R = \frac{V^2}{R} \)</div>
+<div class="formula">Drift velocity: \( v_d = \frac{I}{nAe} \)</div>
 
-            <h3>Archaeology & Art</h3>
-            <p>Ile-Ife produced advanced <strong>bronze and terracotta</strong> sculptures (11th–12th centuries onward), showing technical and artistic sophistication.</p>
+<h2>Magnetic Fields</h2>
+<div class="formula">Magnetic flux: \( \Phi_B = BA \cos\theta \)</div>
+<div class="formula">Biot–Savart: \( dB = \frac{\mu_0}{4\pi} \frac{Idl \sin\theta}{r^2} \)</div>
+<div class="formula">Ampere's law: \( \oint B \, dl = \mu_0 I \)</div>
 
-            <h3>Major Kingdoms</h3>
-            <p><strong>Oyo Empire:</strong> The most powerful Yoruba state (approx. 17th–19th centuries). Others include Ijebu, Ekiti, Ife and later city-states like Ibadan.</p>
+<h2>Forces on Charge & Conductor</h2>
+<div class="formula">Lorentz force: \( F = q(E + vB \sin\theta) \)</div>
+<div class="formula">Conductor: \( F = BIL \sin\theta \)</div>
+<div class="formula">Radius: \( r = \frac{mv}{qB} \)</div>
+<div class="formula">Time period: \( T = \frac{2\pi m}{qB} \)</div>
 
-            <h3>Language & Spread</h3>
-            <p>Yoruba belongs to the <strong>Niger-Congo</strong> language family. The people live mainly in southwestern Nigeria, with communities in Benin and Togo.</p>
+<h2>Electromagnetic Induction</h2>
+<div class="formula">Faraday: \( \varepsilon = -\frac{d\Phi_B}{dt} \)</div>
+<div class="formula">Straight conductor: \( \varepsilon = BLv \)</div>
+<div class="formula">Self-inductance: \( \varepsilon = -L \frac{dI}{dt} \)</div>
+<div class="formula">Energy in inductor: \( U = \frac{1}{2} L I^2 \)</div>
 
-            <h3> Diaspora </h3>
-            <p>Through the transatlantic slave trade Yoruba cultural elements influenced religions in the Americas such as <strong>Santería</strong> (Cuba) and <strong>Candomblé</strong> (Brazil).</p>
+<h2>AC Circuits</h2>
+<div class="formula">Instantaneous emf: \( E = E_0 \sin \omega t \)</div>
+<div class="formula">RMS: \( V_{rms} = \frac{V_0}{\sqrt 2}, \ I_{rms} = \frac{I_0}{\sqrt 2} \)</div>
+<div class="formula">Reactances: \( X_L = \omega L, \ X_C = \frac{1}{\omega C} \)</div>
+<div class="formula">Impedance: \( Z = \sqrt{R^2 + (X_L - X_C)^2} \)</div>
+<div class="formula">Phase angle: \( \tan \phi = \frac{X_L - X_C}{R} \)</div>
+<div class="formula">Power: \( P = VI \cos\phi \)</div>
 
-            <hr>
-            <p class="meta">Quick revision: Ile-Ife ● Odùduwà ● Bronze & terracotta art ● Oyo Empire ● Diaspora religions</p>
-          </div>
-        </section>
+<h2>Semiconductors</h2>
+<div class="formula">Resistivity: \( \rho = \frac{1}{\sigma} = \frac{1}{n e \mu} \)</div>
+<div class="formula">Current density: \( J = \sigma E = nq\mu E \)</div>
+<div class="formula">Diode current: \( I = I_0 (e^{qV/kT} - 1) \)</div>
 
-        <section id="quizSection" class="card" style="margin-top:16px">
-          <div class="topbar">
-            <div>
-              <h2>MCQ Quiz</h2>
-              <div class="meta">Answer the questions — score, progress & reset available</div>
-            </div>
-            <div class="center">
-              <button class="ghost" id="resetQuizBtn">Reset Quiz</button>
-            </div>
-          </div>
-
-          <div id="quizArea">
-            <div class="progress" style="margin-bottom:12px"><i id="progFill"></i></div>
-            <div id="qText" style="font-weight:700;margin-bottom:10px">Question will appear here</div>
-            <div id="opts"></div>
-            <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
-              <button class="ghost" id="prevQBtn">Previous</button>
-              <button class="ghost" id="nextQBtn">Next</button>
-            </div>
-            <div style="margin-top:12px" class="meta">Score: <span id="score">0</span> / <span id="total">0</span></div>
-          </div>
-        </section>
-      </div>
-
-      <aside>
-        <section class="card">
-          <h2>Flashcards</h2>
-          <div class="flash">
-            <div class="flashcard" id="flashcardBox">
-              <div class="q" id="flashQ">Question</div>
-              <div class="a hidden" id="flashA">Answer</div>
-            </div>
-
-            <div class="controls">
-              <button class="ghost" id="prevFlash">Prev</button>
-              <button class="btn" id="showAns">Show Answer</button>
-              <button class="ghost" id="nextFlash">Next</button>
-            </div>
-            <div class="meta" style="margin-top:8px">Card <span id="flashIdx">1</span> / <span id="flashTotal">1</span></div>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:16px">
-          <h2>Quick Tips</h2>
-          <ol class="meta">
-            <li>Remember: <strong>Ile-Ife</strong> is the sacred origin.</li>
-            <li>Odùduwà → founding ancestor. Link to kingship.</li>
-            <li>Oyo Empire = major political power (17th–19th C).</li>
-            <li>Bronze & terracotta = Ife artistic legacy.</li>
-          </ol>
-        </section>
-      </aside>
-    </div>
-
-    <footer>Made for quick revision — open this file in your browser. PDF uses jsPDF to create downloadable notes.</footer>
-  </div>
-
-  <!-- jsPDF from CDN for PDF generation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script>
-    // ====== Content data ======
-    const notesText = document.getElementById('notesContent').innerText;
-
-    const flashcards = [
-      {q: 'Where do the Yoruba trace their ancestral origin?', a: 'Ile-Ife'},
-      {q: 'Who is regarded as the founding ancestor of the Yoruba?', a: 'Odùduwà'},
-      {q: 'Who sent Odùduwà according to tradition?', a: 'Olódùmarè'},
-      {q: 'Ile-Ife is famous for which types of art?', a: 'Bronze and terracotta sculptures'},
-      {q: 'Which kingdom was the most powerful between 17th–19th centuries?', a: 'Oyo Empire'},
-      {q: 'Name a Yoruba kingdom known for trade.', a: 'Ijebu Kingdom'},
-      {q: 'Which language family does Yoruba belong to?', a: 'Niger-Congo'},
-      {q: 'Mention two countries (outside Nigeria) where Yoruba people live.', a: 'Benin and Togo'},
-      {q: 'Which city is regarded as the spiritual and historical home of the Yoruba?', a: 'Ile-Ife'},
-      {q: 'What is an Oba?', a: 'A Yoruba king or ruler'},
-      {q: 'How did Yoruba culture reach the Americas?', a: 'Through the transatlantic slave trade'},
-      {q: 'Give one example of a diaspora religion influenced by Yoruba beliefs.', a: 'Candomblé or Santería'},
-      {q: 'What centuries did advanced Ife art appear?', a: '11th–12th centuries and later'},
-      {q: 'Name one later Yoruba city-state.', a: 'Ibadan'},
-      {q: 'Why do many Yoruba royal lines trace back to Odùduwà?', a: 'Because his children became rulers of other Yoruba kingdoms'},
-    ];
-
-    const mcqBank = [
-      {q:'The Yoruba trace their ancestral origin to:', opts:['Benin','Ile-Ife','Oyo','Togo'], a:'Ile-Ife'},
-      {q:'Who is regarded as the founding ancestor of the Yoruba?', opts:['Oranmiyan','Odùduwà','Obatala','Shango'], a:'Odùduwà'},
-      {q:'Odùduwà was sent by which supreme being?', opts:['Obatala','Olódùmarè','Ogun','Orunmila'], a:'Olódùmarè'},
-      {q:'Ile-Ife is especially known for which art forms?', opts:['Bronze and terracotta','Oil painting','Glasswork','Ivory carving'], a:'Bronze and terracotta'},
-      {q:'Which empire became the most powerful Yoruba state (17th–19th C)?', opts:['Oyo','Ijebu','Ekiti','Ife'], a:'Oyo'},
-      {q:'Yoruba language belongs to which family?', opts:['Afro-Asiatic','Niger-Congo','Austronesian','Indo-European'], a:'Niger-Congo'},
-      {q:'Which of these countries has a notable Yoruba population?', opts:['Egypt','Benin','Morocco','Algeria'], a:'Benin'},
-      {q:'How did Yoruba culture influence the Americas?', opts:['Through movies','Transatlantic slave trade','Modern migration post-2000','Tourism'], a:'Transatlantic slave trade'},
-      {q:'Which religion in the Americas was influenced by Yoruba beliefs?', opts:['Santería','Buddhism','Sikhism','Jainism'], a:'Santería'},
-      {q:'Which city is known as the spiritual centre of the Yoruba?', opts:['Lagos','Ile-Ife','Kano','Ibadan'], a:'Ile-Ife'},
-      {q:'Which material was NOT commonly used in ancient Ife art?', opts:['Terracotta','Bronze','Plastic','Stone'], a:'Plastic'},
-      {q:'Which of these is NOT a Yoruba kingdom?', opts:['Oyo','Ijebu','Ashanti','Ile-Ife'], a:'Ashanti'},
-      {q:'The Oyo Empire was mainly powerful in which centuries?', opts:['10th–12th','13th–15th','17th–19th','20th–21st'], a:'17th–19th'},
-      {q:'An Oba is:', opts:['A market trader','A king','A musician','A farmer'], a:'A king'},
-      {q:'Which statement is TRUE?', opts:['Yoruba originated in North Africa','Yoruba language is Niger-Congo','Yoruba had no ancient art','Yoruba never formed empires'], a:'Yoruba language is Niger-Congo'},
-      {q:'Ile-Ife artworks date from around which century?', opts:['11th–12th','3rd–4th','20th','6th'], a:'11th–12th'},
-      {q:'Candomblé is a religion mainly practiced in which country?', opts:['Brazil','Japan','Russia','Canada'], a:'Brazil'},
-      {q:'Which of these was a centre for trade and politics among the Yoruba?', opts:['Oyo Empire','Hawaii','Mogadishu','Timbuktu'], a:'Oyo Empire'},
-      {q:'Why is Odùduwà important?', opts:['He wrote the first book','He founded Ile-Ife and is ancestor of many kings','He discovered iron','He introduced Christianity'], a:'He founded Ile-Ife and is ancestor of many kings'},
-      {q:'Which two materials feature in Ife sculpture?', opts:['Bronze and terracotta','Paper and cardboard','Gold leaf and silk','Concrete and asphalt'], a:'Bronze and terracotta'},
-    ];
-
-    // ====== Flashcard controls ======
-    let fIdx = 0;
-    const flashQ = document.getElementById('flashQ');
-    const flashA = document.getElementById('flashA');
-    const flashIdx = document.getElementById('flashIdx');
-    const flashTotal = document.getElementById('flashTotal');
-
-    function renderFlash(){
-      const card = flashcards[fIdx];
-      flashQ.textContent = card.q;
-      flashA.textContent = card.a;
-      flashA.classList.add('hidden');
-      flashIdx.textContent = fIdx+1;
-      flashTotal.textContent = flashcards.length;
-    }
-    document.getElementById('nextFlash').addEventListener('click', ()=>{ fIdx = (fIdx+1)%flashcards.length; renderFlash(); });
-    document.getElementById('prevFlash').addEventListener('click', ()=>{ fIdx = (fIdx-1+flashcards.length)%flashcards.length; renderFlash(); });
-    document.getElementById('showAns').addEventListener('click', ()=>{ flashA.classList.toggle('hidden'); });
-    renderFlash();
-
-    // ====== Quiz engine ======
-    const qText = document.getElementById('qText');
-    const optsBox = document.getElementById('opts');
-    const progFill = document.getElementById('progFill');
-    const scoreEl = document.getElementById('score');
-    const totalEl = document.getElementById('total');
-
-    let qIdx = 0; let score = 0; let answered = {};
-    totalEl.textContent = mcqBank.length;
-
-    function renderQuestion(){
-      const q = mcqBank[qIdx];
-      qText.textContent = `${qIdx+1}. ${q.q}`;
-      optsBox.innerHTML = '';
-      q.opts.forEach(opt => {
-        const b = document.createElement('button');
-        b.className = 'option';
-        b.textContent = opt;
-        b.onclick = ()=> selectOption(b,opt,q.a);
-        optsBox.appendChild(b);
-      });
-      progFill.style.width = `${Math.round(((qIdx)/mcqBank.length)*100)}%`;
-      // show selected state if already answered
-      if(answered[qIdx]) highlightAnswered();
-    }
-
-    function selectOption(btn,choice,correct){
-      // if already answered this q, ignore
-      if(answered[qIdx]) return;
-      const buttons = Array.from(optsBox.children);
-      buttons.forEach(b=>{
-        if(b.textContent===correct) b.classList.add('correct');
-        if(b===btn && b.textContent!==correct) b.classList.add('wrong');
-        b.disabled = true;
-      });
-      answered[qIdx] = choice;
-      if(choice === correct) score++;
-      scoreEl.textContent = score;
-    }
-
-    function highlightAnswered(){
-      const ans = answered[qIdx];
-      if(!ans) return;
-      Array.from(optsBox.children).forEach(b=>{
-        if(b.textContent===mcqBank[qIdx].a) b.classList.add('correct');
-        if(b.textContent===ans && ans!==mcqBank[qIdx].a) b.classList.add('wrong');
-        b.disabled = true;
-      });
-    }
-
-    document.getElementById('nextQBtn').addEventListener('click', ()=>{
-      if(qIdx < mcqBank.length-1) qIdx++; renderQuestion();
-      progFill.style.width = `${Math.round(((qIdx)/mcqBank.length)*100)}%`;
-    });
-    document.getElementById('prevQBtn').addEventListener('click', ()=>{ if(qIdx>0) qIdx--; renderQuestion(); });
-
-    document.getElementById('resetQuizBtn').addEventListener('click', ()=>{
-      if(!confirm('Reset quiz and clear your answers?')) return;
-      answered = {}; qIdx=0; score=0; scoreEl.textContent = 0; renderQuestion(); progFill.style.width = '0%';
-    });
-
-    renderQuestion();
-
-    // ====== PDF download using jsPDF ======
-    document.getElementById('downloadPdfBtn').addEventListener('click', async ()=>{
-      const { jsPDF } = window.jspdf;
-      const doc = new jsPDF({unit:'pt', format:'a4'});
-      const title = 'Yoruba History — Concise Notes';
-      doc.setFontSize(18); doc.text(title,40,50);
-      doc.setFontSize(11);
-      // split text to fit
-      const text = document.getElementById('notesContent').innerText;
-      const split = doc.splitTextToSize(text, 520);
-      doc.text(split,40,80);
-      doc.save('yoruba_history_notes.pdf');
-    });
-
-    // ====== Navigation tabs ======
-    const nav = document.getElementById('nav');
-    const tabs = [
-      {id:'notes',label:'Notes',el:'#notesSection'},
-      {id:'flash',label:'Flashcards',el:'.card:nth-of-type(1) aside'},
-      {id:'quiz',label:'Quiz',el:'#quizSection'}
-    ];
-    // simple tabs for keyboard-friendly focus (we'll just highlight UI and scroll)
-    const tabBtns = ['Notes','Flashcards','Quiz'];
-    tabBtns.forEach((t,i)=>{
-      const b = document.createElement('button'); b.className='tab'; b.textContent=t; if(i===0) b.classList.add('active');
-      b.addEventListener('click', ()=>{
-        document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); b.classList.add('active');
-        if(t==='Notes') document.querySelector('#notesSection').scrollIntoView({behavior:'smooth'});
-        if(t==='Flashcards') document.querySelector('[id="flashcardBox"]')?.scrollIntoView({behavior:'smooth'});
-        if(t==='Quiz') document.querySelector('#quizSection').scrollIntoView({behavior:'smooth'});
-      });
-      nav.appendChild(b);
-    });
-
-    // accessibility: keyboard nav for quiz (left/right)
-    window.addEventListener('keydown',(e)=>{
-      if(e.key==='ArrowRight') document.getElementById('nextQBtn').click();
-      if(e.key==='ArrowLeft') document.getElementById('prevQBtn').click();
-    });
-
-  </script>
 </body>
 </html>
