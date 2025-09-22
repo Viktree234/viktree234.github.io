@@ -3,37 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics 104 Formula Sheet</title>
+<title>Physics 102 Formula Sheet</title>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async
  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #fefefe;
-    color: #111;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    background-color: #121212;
+    color: #e0e0e0;
   }
-  h2 {
-    color: #d6336c;
-    border-bottom: 1px solid #ddd;
+  nav {
+    width: 220px;
+    background-color: #1f1f1f;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+  }
+  nav h2 {
+    color: #ff4081;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  nav a {
+    display: block;
+    color: #b0b0b0;
+    text-decoration: none;
+    margin: 8px 0;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+  }
+  nav a:hover {
+    background-color: #ff4081;
+    color: #fff;
+  }
+  main {
+    flex: 1;
+    padding: 20px 30px;
+    overflow-x: hidden;
+  }
+  h1 {
+    color: #ff4081;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  h3 {
+    color: #ffa500;
+    border-bottom: 1px solid #333;
     padding-bottom: 4px;
+    margin-top: 30px;
   }
   .formula {
-    margin: 6px 0;
-    font-size: 1.1em;
+    margin: 8px 0;
+    font-size: 1.05rem;
   }
-  @media(max-width:600px){
-    body { padding: 10px; font-size: 16px; }
+  nav::-webkit-scrollbar {
+    width: 6px;
+  }
+  nav::-webkit-scrollbar-thumb {
+    background: #ff4081;
+    border-radius: 3px;
+  }
+  @media(max-width: 768px){
+    body {
+      flex-direction: column;
+    }
+    nav {
+      width: 100%;
+      height: auto;
+      position: relative;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    nav a {
+      display: inline-block;
+      margin: 5px 10px;
+    }
   }
 </style>
 </head>
 <body>
 
-<h1>Physics 104 – Quick Formula Sheet</h1>
+<nav>
+  <h2>Topics</h2>
+  <a href="#electrostatics">Electrostatics</a>
+  <a href="#current">Current Electricity</a>
+  <a href="#magnetic">Magnetic Fields</a>
+  <a href="#forces">Forces on Charges</a>
+  <a href="#induction">EM Induction</a>
+  <a href="#ac">AC Circuits</a>
+  <a href="#semiconductors">Semiconductors</a>
+</nav>
 
-<h2>Electrostatics, Capacitance & Dielectrics</h2>
+<main>
+<h1>Physics 102 – Formula Sheet</h1>
+
+<h3 id="electrostatics">Electrostatics, Capacitance & Dielectrics</h3>
 <div class="formula">Coulomb's law: \( F = \frac{1}{4\pi \varepsilon_0} \frac{q_1 q_2}{r^2} \)</div>
 <div class="formula">Electric field: \( E = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r^2} \)</div>
 <div class="formula">Potential: \( V = \frac{1}{4\pi \varepsilon_0} \frac{Q}{r} \)</div>
@@ -42,31 +115,31 @@
 <div class="formula">With dielectric: \( C = \kappa \frac{\varepsilon_0 A}{d} \)</div>
 <div class="formula">Energy stored: \( U = \frac{1}{2} C V^2 = \frac{Q^2}{2C} = \frac{1}{2} QV \)</div>
 
-<h2>Current Electricity</h2>
+<h3 id="current">Current Electricity</h3>
 <div class="formula">Ohm's law: \( V = IR \)</div>
 <div class="formula">Current: \( I = \frac{Q}{t} \)</div>
 <div class="formula">Resistance: \( R = \rho \frac{L}{A} \)</div>
 <div class="formula">Power: \( P = VI = I^2R = \frac{V^2}{R} \)</div>
 <div class="formula">Drift velocity: \( v_d = \frac{I}{nAe} \)</div>
 
-<h2>Magnetic Fields</h2>
+<h3 id="magnetic">Magnetic Fields</h3>
 <div class="formula">Magnetic flux: \( \Phi_B = BA \cos\theta \)</div>
 <div class="formula">Biot–Savart: \( dB = \frac{\mu_0}{4\pi} \frac{Idl \sin\theta}{r^2} \)</div>
 <div class="formula">Ampere's law: \( \oint B \, dl = \mu_0 I \)</div>
 
-<h2>Forces on Charge & Conductor</h2>
+<h3 id="forces">Forces on Charges & Conductor</h3>
 <div class="formula">Lorentz force: \( F = q(E + vB \sin\theta) \)</div>
-<div class="formula">Conductor: \( F = BIL \sin\theta \)</div>
+<div class="formula">Force on conductor: \( F = BIL \sin\theta \)</div>
 <div class="formula">Radius: \( r = \frac{mv}{qB} \)</div>
 <div class="formula">Time period: \( T = \frac{2\pi m}{qB} \)</div>
 
-<h2>Electromagnetic Induction</h2>
+<h3 id="induction">Electromagnetic Induction</h3>
 <div class="formula">Faraday: \( \varepsilon = -\frac{d\Phi_B}{dt} \)</div>
 <div class="formula">Straight conductor: \( \varepsilon = BLv \)</div>
 <div class="formula">Self-inductance: \( \varepsilon = -L \frac{dI}{dt} \)</div>
 <div class="formula">Energy in inductor: \( U = \frac{1}{2} L I^2 \)</div>
 
-<h2>AC Circuits</h2>
+<h3 id="ac">AC Circuits</h3>
 <div class="formula">Instantaneous emf: \( E = E_0 \sin \omega t \)</div>
 <div class="formula">RMS: \( V_{rms} = \frac{V_0}{\sqrt 2}, \ I_{rms} = \frac{I_0}{\sqrt 2} \)</div>
 <div class="formula">Reactances: \( X_L = \omega L, \ X_C = \frac{1}{\omega C} \)</div>
@@ -74,10 +147,12 @@
 <div class="formula">Phase angle: \( \tan \phi = \frac{X_L - X_C}{R} \)</div>
 <div class="formula">Power: \( P = VI \cos\phi \)</div>
 
-<h2>Semiconductors</h2>
+<h3 id="semiconductors">Semiconductors</h3>
 <div class="formula">Resistivity: \( \rho = \frac{1}{\sigma} = \frac{1}{n e \mu} \)</div>
 <div class="formula">Current density: \( J = \sigma E = nq\mu E \)</div>
 <div class="formula">Diode current: \( I = I_0 (e^{qV/kT} - 1) \)</div>
+
+</main>
 
 </body>
 </html>
