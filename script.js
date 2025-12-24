@@ -1,73 +1,61 @@
-// Section navigation
-function showSection(sectionId) {
-  document.querySelectorAll('main section').forEach(sec => sec.classList.add('hidden'));
-  document.getElementById(sectionId).classList.remove('hidden');
-}
+/* 💌 Typed letter animation */
+const text = `This year was better because of you.
+Thank you for being my safe place,
+my laughter, and my constant 🫶`;
 
-// Flashcards
-const flashcards = [
-  { q: "Where do the Yoruba trace their ancestral origin?", a: "Ile-Ife" },
-  { q: "Who is the founding ancestor of the Yoruba?", a: "Odùduwà" },
-  { q: "Which empire was most powerful between 17th–19th century?", a: "Oyo Empire" },
-  { q: "What art are the Yoruba famous for?", a: "Bronze and terracotta" },
-];
+let index = 0;
+const speed = 40;
+const messageEl = document.querySelector(".message");
 
-let currentFlash = 0;
+messageEl.textContent = "";
 
-function showAnswer() {
-  document.getElementById('answer').classList.remove('hidden');
-}
-
-function nextFlashcard() {
-  currentFlash = (currentFlash + 1) % flashcards.length;
-  document.getElementById('question').textContent = flashcards[currentFlash].q;
-  document.getElementById('answer').textContent = flashcards[currentFlash].a;
-  document.getElementById('answer').classList.add('hidden');
-}
-
-// Quiz
-const quiz = [
-  {
-    q: "Where do the Yoruba trace their origin?",
-    options: ["Ile-Ife", "Oyo", "Benin", "Togo"],
-    a: "Ile-Ife"
-  },
-  {
-    q: "Who is the founding ancestor of the Yoruba?",
-    options: ["Oranmiyan", "Odùduwà", "Obatala", "Shango"],
-    a: "Odùduwà"
-  },
-];
-
-let currentQ = 0;
-let score = 0;
-
-function loadQuestion() {
-  const q = quiz[currentQ];
-  document.getElementById('quiz-question').textContent = q.q;
-  const optionsDiv = document.getElementById('quiz-options');
-  optionsDiv.innerHTML = '';
-  q.options.forEach(opt => {
-    const btn = document.createElement('button');
-    btn.textContent = opt;
-    btn.onclick = () => {
-      if(opt === q.a) score++;
-      nextQuestion();
-    };
-    optionsDiv.appendChild(btn);
-  });
-  document.getElementById('quiz-score').textContent = `Score: ${score}`;
-}
-
-function nextQuestion() {
-  currentQ++;
-  if(currentQ >= quiz.length) {
-    document.getElementById('quiz-question').textContent = "Quiz Completed!";
-    document.getElementById('quiz-options').innerHTML = "";
-  } else {
-    loadQuestion();
+function typeText() {
+  if (index < text.length) {
+    messageEl.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeText, speed);
   }
 }
 
-// Initialize first quiz question
-loadQuestion();
+typeText();
+
+/* 🎁 Memories + Confetti */
+function toggleMemories() {
+  const mem = document.getElementById("memories");
+  mem.style.display = "block";
+  launchConfetti();
+}
+
+/* 🌟 Confetti */
+function launchConfetti() {
+  for (let i = 0; i < 40; i++) {
+    const conf = document.createElement("div");
+    conf.style.position = "fixed";
+    conf.style.width = "6px";
+    conf.style.height = "6px";
+    conf.style.background = ["#ffd700", "#ff4d4d", "#ffffff"][Math.floor(Math.random()*3)];
+    conf.style.left = Math.random() * 100 + "vw";
+    conf.style.top = "-10px";
+    conf.style.zIndex = 3;
+    conf.style.animation = `fall ${Math.random() * 3 + 2}s linear`;
+    document.body.appendChild(conf);
+
+    setTimeout(() => conf.remove(), 4000);
+  }
+}
+
+/* ❄️ Snow animation */
+function createSnow() {
+  const snow = document.createElement("div");
+  snow.classList.add("snowflake");
+  snow.textContent = "❄";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.fontSize = Math.random() * 10 + 10 + "px";
+  snow.style.animationDuration = Math.random() * 5 + 5 + "s";
+
+  document.body.appendChild(snow);
+
+  setTimeout(() => snow.remove(), 10000);
+}
+
+setInterval(createSnow, 300);
