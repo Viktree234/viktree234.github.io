@@ -28,16 +28,24 @@ body {
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 380px; /* smaller for mobile */
-  padding: 25px 15px;
+  width: 90vw;        /* use 90% of viewport width */
+  max-width: 450px;   /* allow slightly bigger card on bigger phones */
+  padding: 5vw 5vw;   /* responsive padding based on screen */
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(14px);
-  border-radius: 20px;
+  border-radius: 25px;
   text-align: center;
   z-index: 2;
   animation: fadeIn 1.2s ease;
 }
+
+@media (max-width: 400px) {
+  .container {
+    width: 95vw;       /* almost full width on very small screens */
+    padding: 6vw 6vw;
+  }
+}
+
 
 h1 {
   font-family: 'Playfair Display', serif;
@@ -138,22 +146,4 @@ button {
 }
 
 /* MEDIA QUERY FOR SMALLER DEVICES */
-@media (max-width: 400px) {
-  .container {
-    padding: 20px 10px;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 0.95rem;
-  }
-  .bestie-pic {
-    width: 100px;
-    height: 100px;
-  }
-  button {
-    font-size: 0.8rem;
-    padding: 9px 18px;
-  }
-}
+
