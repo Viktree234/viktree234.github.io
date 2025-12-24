@@ -16,6 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: white;
   overflow-x: hidden;
+  padding: 10px;
 }
 
 .overlay {
@@ -27,12 +28,12 @@ body {
 
 .container {
   position: relative;
-  width: 92%;
-  max-width: 420px;
-  padding: 30px 20px;
+  width: 100%;
+  max-width: 380px; /* smaller for mobile */
+  padding: 25px 15px;
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(14px);
-  border-radius: 25px;
+  border-radius: 20px;
   text-align: center;
   z-index: 2;
   animation: fadeIn 1.2s ease;
@@ -40,28 +41,29 @@ body {
 
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
+  font-size: 1.6rem; /* shrink on mobile */
 }
 
 h2 {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   color: #ffdede;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .bestie-pic {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffd700;
+  border: 3px solid #ffd700;
   margin-bottom: 15px;
 }
 
 .message {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
   margin-bottom: 12px;
+  word-break: break-word;
 }
 
 .highlight {
@@ -72,11 +74,13 @@ button {
   margin-top: 10px;
   background: #c62828;
   border: none;
-  padding: 12px 26px;
+  padding: 10px 20px;
   border-radius: 30px;
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
+  width: 90%;
+  max-width: 250px;
 }
 
 .memories {
@@ -86,25 +90,24 @@ button {
 
 .memories video {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 12px;
   margin-bottom: 12px;
+  height: auto;
 }
 
 .footer {
   margin-top: 15px;
   font-size: 0.8rem;
   opacity: 0.85;
+  word-break: break-word;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.bold-footer {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffdd57; /* golden cozy Christmas vibe */
+  margin-top: 8px;
+  word-break: break-word;
 }
 
 /* ❄️ Snowflakes */
@@ -122,9 +125,35 @@ button {
     transform: translateY(110vh);
   }
 }
-.bold-footer {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #ffdd57; /* golden cozy Christmas vibe */
-  margin-top: 8px;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MEDIA QUERY FOR SMALLER DEVICES */
+@media (max-width: 400px) {
+  .container {
+    padding: 20px 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 0.95rem;
+  }
+  .bestie-pic {
+    width: 100px;
+    height: 100px;
+  }
+  button {
+    font-size: 0.8rem;
+    padding: 9px 18px;
+  }
 }
