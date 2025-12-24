@@ -122,3 +122,9 @@ button {
     transform: translateY(110vh);
   }
 }
+.bold-footer {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffdd57; /* golden cozy Christmas vibe */
+  margin-top: 8px;
+}
